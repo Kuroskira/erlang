@@ -27,9 +27,9 @@ rpn("/", [N1,N2|S]) -> [N2 / N1|S];
 rpn("^", [N1,N2|S]) -> [math:pow(N2,N1)|S];
 rpn("ln", [N|S])    -> [math:log(N)|S];
 rpn("log10", [N|S]) -> [math:log10(N)|S];
-rpn("sum", Stack) -> [sum(Stack)];
-rpn("prod", Stack) -> [prod(Stack)];
-rpn(X, Stack) -> [read(X)|Stack].
+rpn("sum", Stack)   -> [sum(Stack)];
+rpn("prod", Stack)  -> [prod(Stack)];
+rpn(X, Stack)       -> [read(X)|Stack].
 
 rpn_test() ->
     5 = rpn("2 3 +"),
